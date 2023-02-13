@@ -5,11 +5,11 @@ namespace Songs_Music
     {
         enum Genre
         {
-            Action,
-            Horror,
-            SciFi,
-            RomCom,
-            Drama
+            Jazz,
+            Rock,
+            Swing,
+            Orchestral,
+            Country
         }
         struct Music
         {
@@ -45,24 +45,24 @@ namespace Songs_Music
             string tempLength = Console.ReadLine();
             Console.WriteLine("What kind of music is it? i.e genre.");
             Console.WriteLine("J - Jazz\nR - Rock\nS - Swing\nO - Orchestral\nC - Country");
-            Genre tempGenre = Genre.Action;
+            Genre tempGenre = Genre.Jazz;
             char g = char.Parse(Console.ReadLine());
             switch (g)
             {
                 case 'J':
-                    tempGenre = Genre.Action;
+                    tempGenre = Genre.Jazz;
                     break;
                 case 'R':
-                    tempGenre = Genre.Action;
+                    tempGenre = Genre.Rock;
                     break;
                 case 'S':
-                    tempGenre = Genre.SciFi;
+                    tempGenre = Genre.Swing;
                     break;
                 case 'O':
-                    tempGenre = Genre.RomCom;
+                    tempGenre = Genre.Orchestral;
                     break;
                 case 'C':
-                    tempGenre = Genre.Drama;
+                    tempGenre = Genre.Country;
                     break;
             }
             Music song = new Music(tempTitle, tempArtist, tempAlbum, tempLength, tempGenre);
